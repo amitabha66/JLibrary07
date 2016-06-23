@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.netbeans.org/ns/library-declaration/2" version="2.0">
+    <name>RIBio</name>
+    <type>j2se</type>
+    <display-name>RIBio</display-name>
+    <volume>
+        <type>classpath</type>
+        <resource>jar:file:/L:/ResearchInformatics/RIBio/RIBio.jar!/</resource>
+    </volume>
+    <volume>
+        <type>src</type>
+    </volume>
+    <volume>
+        <type>javadoc</type>
+    </volume>
+    <volume>
+        <type>maven-pom</type>
+    </volume>
+</library>

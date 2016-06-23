@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.netbeans.org/ns/library-declaration/2" version="2.0">
+    <name>Apache-HTTPComponents</name>
+    <type>j2se</type>
+    <display-name>Apache-HTTPComponents</display-name>
+    <volume>
+        <type>classpath</type>
+        <resource>jar:file:/L:/ApacheCommons/http-components/httpcomponents-client-4.2.2/lib/httpclient-4.2.2.jar!/</resource>
+        <resource>jar:file:/L:/ApacheCommons/http-components/httpcomponents-client-4.2.2/lib/httpcore-4.2.2.jar!/</resource>
+        <resource>jar:file:/L:/ApacheCommons/http-components/httpcomponents-client-4.2.2/lib/commons-codec-1.6.jar!/</resource>
+    </volume>
+    <volume>
+        <type>src</type>
+        <resource>file:/L:/ApacheCommons/http-components/httpcomponents-client-4.2.2/httpclient-cache/src/</resource>
+        <resource>file:/L:/ApacheCommons/http-components/httpcomponents-client-4.2.2/httpclient/src/</resource>
+        <resource>file:/L:/ApacheCommons/http-components/httpcomponents-client-4.2.2/src/</resource>
+    </volume>
+    <volume>
+        <type>javadoc</type>
+        <resource>file:/L:/ApacheCommons/http-components/httpcomponents-client-4.2.2/javadoc/</resource>
+        <resource>file:/L:/ApacheCommons/http-components/httpcomponents-core-4.2.2/javadoc/</resource>
+    </volume>
+    <volume>
+        <type>maven-pom</type>
+    </volume>
+</library>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library PUBLIC "-//NetBeans//DTD Library Declaration 1.0//EN" "http://www.netbeans.org/dtds/library-declaration-1_0.dtd">
+<library version="1.0">
+    <name>Xalan_2.7.0</name>
+    <type>j2se</type>
+    <volume>
+        <type>classpath</type>
+        <resource>jar:file:/L:/XML/Xalan/xalan-j_2_7_0/serializer.jar!/</resource>
+        <resource>jar:file:/L:/XML/Xalan/xalan-j_2_7_0/xalan.jar!/</resource>
+    </volume>
+    <volume>
+        <type>src</type>
+    </volume>
+    <volume>
+        <type>javadoc</type>
+        <resource>file:/L:/XML/Xalan/xalan-j_2_7_0/docs/apidocs/</resource>
+    </volume>
+    <volume>
+        <type>maven-pom</type>
+    </volume>
+</library>

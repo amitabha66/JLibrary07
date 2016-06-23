@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library PUBLIC "-//NetBeans//DTD Library Declaration 1.0//EN" "http://www.netbeans.org/dtds/library-declaration-1_0.dtd">
+<library version="1.0">
+    <name>Log4J_1.2.14</name>
+    <type>j2se</type>
+    <volume>
+        <type>classpath</type>
+        <resource>jar:file:/L:/ApacheCommons/log4j-1.2.14/lib/log4j-1.2.14.jar!/</resource>
+    </volume>
+    <volume>
+        <type>src</type>
+        <resource>file:/L:/ApacheCommons/log4j-1.2.14/src/java/</resource>
+    </volume>
+    <volume>
+        <type>javadoc</type>
+        <resource>file:/L:/ApacheCommons/log4j-1.2.14/docs/api/</resource>
+    </volume>
+    <volume>
+        <type>maven-pom</type>
+    </volume>
+</library>

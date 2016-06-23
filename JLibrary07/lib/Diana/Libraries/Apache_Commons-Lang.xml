@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library PUBLIC "-//NetBeans//DTD Library Declaration 1.0//EN" "http://www.netbeans.org/dtds/library-declaration-1_0.dtd">
+<library version="1.0">
+    <name>Apache_Commons-Lang_2.5</name>
+    <type>j2se</type>
+    <volume>
+        <type>classpath</type>
+        <resource>jar:file:/L:/ApacheCommons/commons-lang-2.5/commons-lang-2.5.jar!/</resource>
+    </volume>
+    <volume>
+        <type>src</type>
+        <resource>jar:file:/L:/ApacheCommons/commons-lang-2.5/commons-lang-2.5-sources.jar!/</resource>
+    </volume>
+    <volume>
+        <type>javadoc</type>
+        <resource>jar:file:/L:/ApacheCommons/commons-lang-2.5/commons-lang-2.5-javadoc.jar!/</resource>
+    </volume>
+    <volume>
+        <type>maven-pom</type>
+    </volume>
+</library>

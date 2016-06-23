@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.netbeans.org/ns/library-declaration/2" version="2.0">
+    <name>RICore</name>
+    <type>j2se</type>
+    <display-name>RICore</display-name>
+    <volume>
+        <type>classpath</type>
+        <resource>jar:file:/L:/ResearchInformatics/RICore/RICore.jar!/</resource>
+    </volume>
+    <volume>
+        <type>src</type>
+        <resource>file:/C:/Development/JProjects2/RICore/src/</resource>
+        <resource>file:/C:/Development/JProjects2/RICore/src/</resource>
+    </volume>
+    <volume>
+        <type>javadoc</type>
+    </volume>
+    <volume>
+        <type>maven-pom</type>
+    </volume>
+</library>

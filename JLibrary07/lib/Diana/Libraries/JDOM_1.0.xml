@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library PUBLIC "-//NetBeans//DTD Library Declaration 1.0//EN" "http://www.netbeans.org/dtds/library-declaration-1_0.dtd">
+<library version="1.0">
+    <name>JDOM_1.0</name>
+    <type>j2se</type>
+    <volume>
+        <type>classpath</type>
+        <resource>jar:file:/L:/XML/JDom/lib/jdom.jar!/</resource>
+        <resource>jar:file:/L:/XML/JDom/lib/jaxen-core.jar!/</resource>
+        <resource>jar:file:/L:/XML/JDom/lib/jaxen-jdom.jar!/</resource>
+        <resource>jar:file:/L:/XML/JDom/lib/saxpath.jar!/</resource>
+    </volume>
+    <volume>
+        <type>src</type>
+        <resource>file:/L:/XML/JDom/src/java/</resource>
+        <resource>file:/L:/XML/JDom/src/java/</resource>
+        <resource>file:/L:/XML/JDom/src/java/</resource>
+        <resource>file:/L:/XML/JDom/src/java/</resource>
+    </volume>
+    <volume>
+        <type>javadoc</type>
+        <resource>file:/L:/XML/JDom/doc/</resource>
+        <resource>file:/L:/XML/JDom/doc/</resource>
+        <resource>file:/L:/XML/JDom/doc/</resource>
+        <resource>file:/L:/XML/JDom/doc/</resource>
+    </volume>
+    <volume>
+        <type>maven-pom</type>
+    </volume>
+</library>

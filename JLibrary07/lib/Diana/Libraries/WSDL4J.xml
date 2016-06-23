@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library PUBLIC "-//NetBeans//DTD Library Declaration 1.0//EN" "http://www.netbeans.org/dtds/library-declaration-1_0.dtd">
+<library version="1.0">
+    <name>WSDL4J</name>
+    <type>j2se</type>
+    <volume>
+        <type>classpath</type>
+        <resource>jar:file:/L:/Services/WSDL/wsdl4j-1_6_2/lib/wsdl4j.jar!/</resource>
+        <resource>jar:file:/L:/Services/WSDL/wsdl4j-1_6_2/lib/qname.jar!/</resource>
+    </volume>
+    <volume>
+        <type>src</type>
+    </volume>
+    <volume>
+        <type>javadoc</type>
+        <resource>file:/L:/Services/WSDL/wsdl4j-1_6_2/docs/api/</resource>
+        <resource>file:/L:/Services/WSDL/wsdl4j-1_6_2/docs/api/</resource>
+    </volume>
+    <volume>
+        <type>maven-pom</type>
+    </volume>
+</library>

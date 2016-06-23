@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library PUBLIC "-//NetBeans//DTD Library Declaration 1.0//EN" "http://www.netbeans.org/dtds/library-declaration-1_0.dtd">
+<library version="1.0">
+    <name>Saxon</name>
+    <type>j2se</type>
+    <volume>
+        <type>classpath</type>
+        <resource>jar:file:/L:/XML/Saxon/lib/saxon8.jar!/</resource>
+        <resource>jar:file:/L:/XML/Saxon/lib/saxon8-ant.jar!/</resource>
+        <resource>jar:file:/L:/XML/Saxon/lib/saxon8-dom4j.jar!/</resource>
+        <resource>jar:file:/L:/XML/Saxon/lib/saxon8-dom.jar!/</resource>
+        <resource>jar:file:/L:/XML/Saxon/lib/saxon8-jdom.jar!/</resource>
+        <resource>jar:file:/L:/XML/Saxon/lib/saxon8-sql.jar!/</resource>
+        <resource>jar:file:/L:/XML/Saxon/lib/saxon8-xom.jar!/</resource>
+        <resource>jar:file:/L:/XML/Saxon/lib/saxon8-xpath.jar!/</resource>
+        <resource>jar:file:/L:/XML/Saxon/lib/saxon8-xqj.jar!/</resource>
+    </volume>
+    <volume>
+        <type>src</type>
+        <resource>file:/L:/XML/Saxon/src/</resource>
+        <resource>file:/L:/XML/Saxon/src/</resource>
+        <resource>file:/L:/XML/Saxon/src/</resource>
+        <resource>file:/L:/XML/Saxon/src/</resource>
+        <resource>file:/L:/XML/Saxon/src/</resource>
+        <resource>file:/L:/XML/Saxon/src/</resource>
+        <resource>file:/L:/XML/Saxon/src/</resource>
+        <resource>file:/L:/XML/Saxon/src/</resource>
+        <resource>file:/L:/XML/Saxon/src/</resource>
+    </volume>
+    <volume>
+        <type>javadoc</type>
+        <resource>file:/L:/XML/Saxon/doc/javadoc/</resource>
+        <resource>file:/L:/XML/Saxon/doc/javadoc/</resource>
+        <resource>file:/L:/XML/Saxon/doc/javadoc/</resource>
+        <resource>file:/L:/XML/Saxon/doc/javadoc/</resource>
+        <resource>file:/L:/XML/Saxon/doc/javadoc/</resource>
+        <resource>file:/L:/XML/Saxon/doc/javadoc/</resource>
+        <resource>file:/L:/XML/Saxon/doc/javadoc/</resource>
+        <resource>file:/L:/XML/Saxon/doc/javadoc/</resource>
+        <resource>file:/L:/XML/Saxon/doc/javadoc/</resource>
+    </volume>
+    <volume>
+        <type>maven-pom</type>
+    </volume>
+</library>

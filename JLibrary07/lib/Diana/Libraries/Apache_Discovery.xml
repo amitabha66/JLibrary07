@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library PUBLIC "-//NetBeans//DTD Library Declaration 1.0//EN" "http://www.netbeans.org/dtds/library-declaration-1_0.dtd">
+<library version="1.0">
+    <name>Apache_Commons-Discovery_0.4</name>
+    <type>j2se</type>
+    <volume>
+        <type>classpath</type>
+        <resource>jar:file:/L:/ApacheCommons/commons-discovery-0.4/commons-discovery-0.4.jar!/</resource>
+    </volume>
+    <volume>
+        <type>src</type>
+        <resource>file:/L:/ApacheCommons/commons-discovery-0.4/src/java/</resource>
+    </volume>
+    <volume>
+        <type>javadoc</type>
+        <resource>file:/L:/ApacheCommons/commons-discovery-0.4/docs/apidocs/</resource>
+    </volume>
+    <volume>
+        <type>maven-pom</type>
+    </volume>
+</library>

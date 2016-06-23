@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+
+
+    <!-- spring beans configuration location -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>WEB-INF/beans.xml</param-value>
+    </context-param>
+
+    <!-- spring listener -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    
+
+
+  <!-- debugging filter -->
+  <filter>
+    <filter-name>DebugFilter</filter-name>
+    <filter-class>com.amgen.seattle.appdev.utilities.servlet.DebugServletFilter</filter-class>
+  </filter>
+
+    <!-- needed to ensure utf-8 encoding with Struts -->
+    <filter>
+        <filter-name>UTF8Filter</filter-name>
+        <filter-class>com.amgen.seattle.appdev.utilities.servlet.UTF8Filter</filter-class>
+    </filter>
+
+    <!-- ldap authentication filter -->
+    <filter>
+        <filter-name>AuthenticationFilter</filter-name>
+        <filter-class>com.amgen.seattle.appdev.utilities.servlet.LdapAuthenticationFilter</filter-class>
+        <init-param>
+            <param-name>key_dir</param-name>
+            <param-value>/home/sciad/amgen-keys</param-value>
+            <!-- override this value for dev environment with VM parameter: -Dinit.key_dir=c:\dev\keys -Dinit.LdapHost=winterset.amgen.com  -->
+        </init-param>
+        <init-param>
+          <param-name>test_mode</param-name>
+          <param-value>false</param-value>
+        </init-param>
+        <init-param>
+          <param-name>debug_mode</param-name>
+          <param-value>false</param-value>
+        </init-param>
+        <init-param>
+          <param-name>logoffURL</param-name>
+          <param-value>http://myamgen.amgen.com</param-value>
+        </init-param>
+    </filter>
+
+    <!-- ldap authorIZation filter -->
+    <filter>
+        <filter-name>AuthorizationFilter</filter-name>
+        <filter-class>com.amgen.seattle.appdev.utilities.servlet.LdapAuthorizationFilter</filter-class>
+        <init-param>
+            <param-name>LdapHost</param-name>
+            <param-value>ldap.amgen.com</param-value>
+            <!-- override this value for dev environment with VM parameter: -Dinit.LdapHost=winterset.amgen.com  -->
+        </init-param>
+        <init-param>
+            <param-name>LdapApplicationOrgUnitName</param-name>
+            <param-value>n2f</param-value> <!-- name of organizational unit holding ldap roles for the application -->
+        </init-param>
+    </filter>
+
+  <!-- application initialization filter -->
+  <filter>
+    <filter-name>AppInitFilter</filter-name>
+    <filter-class>com.amgen.seattle.appdev.utilities.servlet.AppInitFilter</filter-class>
+    <init-param>
+      <param-name>DataSourceName</param-name>
+      <param-value>jdbc/n2f</param-value>
+    </init-param>
+    <init-param>
+      <param-name>SchemaName</param-name>
+      <param-value>N2F</param-value>
+    </init-param>
+    <init-param>
+      <param-name>StaffIdInClientInfo</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+
+    <!-- Freezer application initialization filter -->
+    <filter>
+      <filter-name>FreezerAppInitFilter</filter-name>
+      <filter-class>com.amgen.seattle.appdev.freezer.FreezerAppInit</filter-class>
+    </filter>
+
+    <!-- app usage logging filter -->
+    <filter>
+        <filter-name>AppUsageLoggingFilter</filter-name>
+        <filter-class>com.amgen.seattle.appdev.utilities.servlet.AppUsageLoggingFilter</filter-class>
+        <init-param>
+            <param-name>ApplicationName</param-name>
+            <param-value>Freezer Inventory</param-value>
+        </init-param>
+    </filter>
+
+  <!-- put debug filter at the head of the chain - ->
+  <filter-mapping>
+    <filter-name>DebugFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  -->
+
+    <!-- needed to ensure correct encoding with Struts and GWT -->
+    <filter-mapping>
+        <filter-name>UTF8Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    <!-- ldap authentication filter mappings -->
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- ldap authorization filter mappings -->
+    <filter-mapping>
+        <filter-name>AuthorizationFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- app initialization filter mappings -->
+    <filter-mapping>
+        <filter-name>AppInitFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- Freezer app initialization filter mappings -->
+    <filter-mapping>
+        <filter-name>FreezerAppInitFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- app usage logging filter mappings -->
+    <filter-mapping>
+        <filter-name>AppUsageLoggingFilter</filter-name>
+        <servlet-name>action</servlet-name> <!-- takes care of all action pages, excludes *.gif hits -->
+    </filter-mapping>
+
+
+  <!-- action servlet -->
+  <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+    <init-param>
+      <param-name>application</param-name>
+      <param-value>ApplicationResources</param-value>
+    </init-param>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>/WEB-INF/struts-config.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>convertNull</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>2</param-value>
+    </init-param>
+    <init-param>
+      <param-name>detail</param-name>
+      <param-value>2</param-value>
+    </init-param>
+    <init-param>
+      <param-name>validate</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+
+    <!-- GWT Servlet(s) -->
+    <servlet>
+      <servlet-name>FreezerGwtServlet</servlet-name>
+      <servlet-class>com.amgen.seattle.appdev.freezer.gwt.server.FreezerGwtServiceImpl</servlet-class>
+    </servlet>
+
+
+  <!-- Standard Action Servlet Mapping -->
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+
+
+    <!-- GWT Servlet mapping(s) -->
+    <servlet-mapping>
+      <servlet-name>FreezerGwtServlet</servlet-name>
+      <url-pattern>/freezergwt/entryPt</url-pattern>
+    </servlet-mapping>
+
+
+
+  <!-- The Usual Welcome File List -->
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+  <!-- Struts Tag Library Descriptors -->
+  <!--<taglib>-->
+    <!--<taglib-uri>/WEB-INF/struts-bean.tld</taglib-uri>-->
+    <!--<taglib-location>/WEB-INF/struts-bean.tld</taglib-location>-->
+  <!--</taglib>-->
+  <!--<taglib>-->
+    <!--<taglib-uri>/WEB-INF/struts-html.tld</taglib-uri>-->
+    <!--<taglib-location>/WEB-INF/struts-html.tld</taglib-location>-->
+  <!--</taglib>-->
+  <!--<taglib>-->
+    <!--<taglib-uri>/WEB-INF/struts-logic.tld</taglib-uri>-->
+    <!--<taglib-location>/WEB-INF/struts-logic.tld</taglib-location>-->
+  <!--</taglib>-->
+  <!--<taglib>-->
+    <!--<taglib-uri>/WEB-INF/struts-tiles.tld</taglib-uri>-->
+    <!--<taglib-location>/WEB-INF/struts-tiles.tld</taglib-location>-->
+  <!--</taglib>-->
+
+  <resource-ref>
+   <description>Oracle Datasource</description>
+   <res-ref-name>jdbc/n2f</res-ref-name>
+   <res-type>java.lang.Object</res-type>
+   <res-auth>Container</res-auth>
+   <res-sharing-scope>Shareable</res-sharing-scope>
+  </resource-ref>
+
+  <resource-ref>
+   <description>App Usage Logging Oracle Datasource</description>
+   <res-ref-name>jdbc/app_usage</res-ref-name>
+   <res-type>java.lang.Object</res-type>
+   <res-auth>Container</res-auth>
+   <res-sharing-scope>Shareable</res-sharing-scope>
+  </resource-ref>
+
+</web-app>

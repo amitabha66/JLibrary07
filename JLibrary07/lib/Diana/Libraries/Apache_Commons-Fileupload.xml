@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library PUBLIC "-//NetBeans//DTD Library Declaration 1.0//EN" "http://www.netbeans.org/dtds/library-declaration-1_0.dtd">
+<library version="1.0">
+    <name>Apache_Commons-Fileupload_2.1</name>
+    <type>j2se</type>
+    <volume>
+        <type>classpath</type>
+        <resource>jar:file:/L:/ApacheCommons/commons-fileupload-1.2/lib/commons-fileupload-1.2.jar!/</resource>
+    </volume>
+    <volume>
+        <type>src</type>
+        <resource>jar:file:/L:/ApacheCommons/commons-fileupload-1.2/lib/commons-fileupload-1.2-sources.jar!/</resource>
+    </volume>
+    <volume>
+        <type>javadoc</type>
+        <resource>file:/L:/ApacheCommons/commons-fileupload-1.2/lib/commons-fileupload-1.2-javadoc.jar!</resource>
+    </volume>
+    <volume>
+        <type>maven-pom</type>
+    </volume>
+</library>

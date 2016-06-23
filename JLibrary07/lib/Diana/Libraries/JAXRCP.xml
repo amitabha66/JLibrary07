@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library PUBLIC "-//NetBeans//DTD Library Declaration 1.0//EN" "http://www.netbeans.org/dtds/library-declaration-1_0.dtd">
+<library version="1.0">
+    <name>JAXRCP</name>
+    <type>j2se</type>
+    <volume>
+        <type>classpath</type>
+        <resource>jar:file:/L:/Services/JAX-RPC/jaxrpc/lib/jaxrpc-api.jar!/</resource>
+        <resource>jar:file:/L:/Services/JAX-RPC/jaxrpc/lib/jaxrpc-impl.jar!/</resource>
+        <resource>jar:file:/L:/Services/JAX-RPC/jaxrpc/lib/jaxrpc-spi.jar!/</resource>
+    </volume>
+    <volume>
+        <type>src</type>
+    </volume>
+    <volume>
+        <type>javadoc</type>
+    </volume>
+    <volume>
+        <type>maven-pom</type>
+    </volume>
+</library>

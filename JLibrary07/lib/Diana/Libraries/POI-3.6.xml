@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library PUBLIC "-//NetBeans//DTD Library Declaration 1.0//EN" "http://www.netbeans.org/dtds/library-declaration-1_0.dtd">
+<library version="1.0">
+    <name>POI_3.6</name>
+    <type>j2se</type>
+    <volume>
+        <type>classpath</type>
+        <resource>jar:file:/L:/ApachePOI/poi-3.6/poi-3.6-20091214.jar!/</resource>
+        <resource>jar:file:/L:/ApachePOI/poi-3.6/poi-ooxml-3.6-20091214.jar!/</resource>
+        <resource>jar:file:/L:/ApachePOI/poi-3.6/poi-scratchpad-3.6-20091214.jar!/</resource>
+        <resource>jar:file:/L:/ApachePOI/poi-3.6/poi-ooxml-schemas-3.6-20091214.jar!/</resource>
+        <resource>jar:file:/L:/ApachePOI/poi-3.6/poi-contrib-3.6-20091214.jar!/</resource>
+        <resource>jar:file:/L:/ApachePOI/poi-3.6/ooxml-lib/xmlbeans-2.3.0.jar!/</resource>
+        <resource>jar:file:/L:/ApachePOI/poi-3.6/ooxml-lib/geronimo-stax-api_1.0_spec-1.0.jar!/</resource>
+        <resource>jar:file:/L:/ApachePOI/poi-3.6/ooxml-lib/dom4j-1.6.1.jar!/</resource>
+    </volume>
+    <volume>
+        <type>src</type>
+        <resource>file:/L:/ApachePOI/poi-3.6/src/java/</resource>
+        <resource>file:/L:/ApachePOI/poi-3.6/src/java/</resource>
+        <resource>file:/L:/ApachePOI/poi-3.6/src/java/</resource>
+        <resource>file:/L:/ApachePOI/poi-3.6/src/java/</resource>
+        <resource>file:/L:/ApachePOI/poi-3.6/src/java/</resource>
+    </volume>
+    <volume>
+        <type>javadoc</type>
+        <resource>file:/L:/ApachePOI/poi-3.6/docs/apidocs/</resource>
+        <resource>file:/L:/ApachePOI/poi-3.6/docs/apidocs/</resource>
+        <resource>file:/L:/ApachePOI/poi-3.6/docs/apidocs/</resource>
+        <resource>file:/L:/ApachePOI/poi-3.6/docs/apidocs/</resource>
+        <resource>file:/L:/ApachePOI/poi-3.6/docs/apidocs/</resource>
+        <resource>file:/L:/ApachePOI/poi-3.6/docs/apidocs/</resource>
+        <resource>file:/L:/ApachePOI/poi-3.6/docs/apidocs/</resource>
+        <resource>file:/L:/ApachePOI/poi-3.6/docs/apidocs/</resource>
+    </volume>
+    <volume>
+        <type>maven-pom</type>
+    </volume>
+</library>
